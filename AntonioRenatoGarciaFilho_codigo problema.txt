@@ -1,4 +1,4 @@
-1259-resolucao
+1259 Pares e impares-resolucao
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,7 +45,7 @@ int main(){
 }
 
 
-1548-resolucao
+1548 Fila do Recreio-resolucao
 
 #include <stdio.h>
 
