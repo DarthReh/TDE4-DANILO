@@ -1,3 +1,4 @@
+//diamantes e areias 1069
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -65,7 +66,7 @@ int main()
  return 0;
 }
 
-//
+//composição de jingles 1430
 
 #include <stdio.h>
 #include <string.h>
