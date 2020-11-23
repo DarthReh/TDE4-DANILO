@@ -1,7 +1,3 @@
-1110 questão do uri 
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -90,8 +86,6 @@ int main(){
  return 0;
 }
 
-
-2984 questão do uri
 
 
 #include <stdio.h>
