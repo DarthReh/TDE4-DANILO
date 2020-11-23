@@ -84,7 +84,7 @@ int main(){
 
    if(!vazio(fila))
     printf("\nRemaining card: %d\n", pop(fila));
-  }
+  }
  }while(n!=0);
 
  return 0;
