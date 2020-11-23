@@ -1,4 +1,4 @@
-1763-Tradutora do Papai Noel
+//1763-Tradutor do Papai Noel
 
 #include <stdio.h>
 #include <string.h>
@@ -23,19 +23,19 @@ typedef struct{
 tradutor traducao[24];
 unsigned short posicao;
 
-void preencheTradutor();
-bool pesquisaPais(char *);
+void addtradutor();
+bool pesquisa(char *);
 
 void main ()
 {
 
-	preencheTradutor();
+	addtradutor();
 	char pais[100];
 
 	while (scanf(" %s", pais) != EOF)
 	{
 
-		if (pesquisaPais(pais))
+		if (pesquisa(pais))
 			printf("%s\n", traducao[posicao].saudacao);
 		else
 			printf("--- NOT FOUND ---\n");
@@ -44,28 +44,28 @@ void main ()
 
 }
 
-void preencheTradutor()
+void addtradutor()
 {
 
-	unsigned short i;
+	unsigned short j;
 
-	for (i = 0; i < 24; i++)
+	for (j = 0; j < 24; j++)
 	{
-		strcpy(traducao[i].pais, paises[i]);
-		strcpy(traducao[i].saudacao, saudacoes[i]);
+		strcpy(traducao[j].pais, paises[j]);
+		strcpy(traducao[j].saudacao, saudacoes[j]);
 	}
 
 }
 
-bool pesquisaPais(char *pais)
+bool pesquisa(char *pais)
 {
 
-	unsigned short i;
+	unsigned short j;
 
-	for (i = 0; i < 24; i++)
-		if (strcmp(traducao[i].pais, pais) == 0)
+	for (j = 0; j < 24; j++)
+		if (strcmp(traducao[j].pais, pais) == 0)
 		{
-			posicao = i;
+			posicao = j;
 			return true;
 		}
 
