@@ -19,16 +19,16 @@
 
 int main()
 {
-    int N, i, diamantes, achou, a;
+    int A, B, diamantes, achou, a;
     char linha[1001];
  
  #ifdef DEBUG
   double tI_ = clock();
  #endif
  
-    scanf("%d", &N);
+    scanf("%d", &A);
  
- while(N--){
+ while(A--){
   scanf(" %s", linha);
   
   achou = 1;
@@ -38,20 +38,20 @@ int main()
    a = 0;
    achou = 0;
    
-   for(i = 0; linha[i] != '\0'; i++)
+   for(B = 0; linha[B] != '\0'; B++)
    {
-    if(linha[i] == '<' && a == 0)
+    if(linha[B] == '<' && a == 0)
     {
      a = 1;
-     linha[i] = '.';
+     linha[B] = '.';
     }
     
-    if(linha[i] == '>' && a)
+    if(linha[B] == '>' && a)
     {
      a = 0;
      achou = 1;
      diamantes++;
-     linha[i] = '.';
+     linha[B] = '.';
     }
    }
   }
@@ -73,27 +73,27 @@ int main()
 int main()
 {
     char str[1000];
-    int cnt=0, i;
-    double drtn=0.0;
+    int contador=0, i;
+    double a=0.0;
     while(gets(str))
     {
         if(str[0]=='*') break;
-        for(i=0, cnt=0; str[i]; i++)
+        for(i=0, contador=0; str[i]; i++)
         {
             if(str[i]=='/')
             {
-                if(drtn==1.00) cnt++;
-                drtn = 0.00;
+                if(a==1.00) contador++;
+                a = 0.00;
             }
-            else if(str[i]=='W') drtn+=(1.00);
-            else if(str[i]=='H') drtn+=(1.00/2.0);
-            else if(str[i]=='Q') drtn+=(1.00/4.0);
-            else if(str[i]=='E') drtn+=(1.00/8.0);
-            else if(str[i]=='S') drtn+=(1.00/16.0);
-            else if(str[i]=='T') drtn+=(1.00/32.0);
-            else if(str[i]=='X') drtn+=(1.00/64.0);
+            else if(str[i]=='W') a+=(1.00);
+            else if(str[i]=='H') a+=(1.00/2.0);
+            else if(str[i]=='Q') a+=(1.00/4.0);
+            else if(str[i]=='E') a+=(1.00/8.0);
+            else if(str[i]=='S') a+=(1.00/16.0);
+            else if(str[i]=='T') a+=(1.00/32.0);
+            else if(str[i]=='X') a+=(1.00/64.0);
         }
-        printf("%d\n", cnt);
+        printf("%d\n", contador);
     }
     return 0;
 }
