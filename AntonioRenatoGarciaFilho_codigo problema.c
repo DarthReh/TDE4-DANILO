@@ -4,18 +4,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int ascending(void const *a, void const *b )
+int ascending(void const *e, void const *d )
 {
-    return (*(int*)a - *(int*)b );
+    return (*(int*)e - *(int*)d );
 }
 
-int descending(void const *a, void const *b )
+int descending(void const *e, void const *d )
 {
-    return (*(int*)b - *(int*)a );
+    return (*(int*)d - *(int*)e );
 }
 
 int main(){
-    int n, i, num, par, impar;
+    int n, d, num, par, impar;
     
     scanf("%d", &n);
     par = 0;
@@ -23,7 +23,7 @@ int main(){
     int np[n];
     int ni[n];
     
-    for(i = 0; i < n; i++){
+    for(d = 0; d < n; d++){
         scanf("%d", &num);
         if(num%2 == 0){
             np[par] = num;
@@ -35,11 +35,11 @@ int main(){
     }
     qsort(np, par, sizeof(int), ascending);
     qsort(ni, impar, sizeof(int), descending);
-    for(i = 0; i < par; i++){
-        printf("%d\n",np[i]);
+    for(d = 0; d < par; d++){
+        printf("%d\n",np[d]);
     }
-    for(i = 0; i < impar; i++){
-        printf("%d\n",ni[i]);
+    for(d = 0; d < impar; d++){
+        printf("%d\n",ni[d]);
     }
     
     return 0;
@@ -58,7 +58,7 @@ void main ()
 
 	unsigned short casos;
 	unsigned short numAlunos;
-	int i;
+	int b;
 
 	scanf("%hu", &casos);
 
@@ -70,17 +70,17 @@ void main ()
 		short filaAntes[numAlunos];
 		short filaDepois[numAlunos];
 
-		for (i = 0; i < numAlunos; i++)
+		for (b = 0; b < numAlunos; b++)
 		{
-			scanf("%hd", &filaAntes[i]);
-			filaDepois[i] = filaAntes[i];
+			scanf("%hd", &filaAntes[b]);
+			filaDepois[b] = filaAntes[b];
 		}
 
 		trocas = 0;
 		selection(filaDepois, numAlunos);
 
-		for (i = 0; i < numAlunos; i++)
-			if (filaAntes[i] == filaDepois[i])
+		for (b = 0; b < numAlunos; b++)
+			if (filaAntes[b] == filaDepois[b])
 				trocas++;
 
 		printf("%d\n", trocas);
@@ -92,22 +92,22 @@ void main ()
 void selection(short *vetor, unsigned short tam)
 {
 
-	unsigned short i, j;
+	unsigned short b, j;
 	short maior, temp;
 
-	for (i = 0; i < tam - 1; i++)
+	for (b = 0; b < tam - 1; b++)
 	{
 
-		maior = i;
-		for (j = i + 1; j < tam; j++)
+		maior = b;
+		for (j = b + 1; j < tam; j++)
 			if (vetor[j] > vetor[maior])
 				maior = j;
 
-		if (i != maior)
+		if (b != maior)
 		{
 
-			temp = vetor[i];
-			vetor[i] = vetor[maior];
+			temp = vetor[b];
+			vetor[b] = vetor[maior];
 			vetor[maior] = temp;
 
 		}
@@ -115,6 +115,7 @@ void selection(short *vetor, unsigned short tam)
 	}
 
 }
+
 
 
 
