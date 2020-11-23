@@ -1,6 +1,3 @@
-
-1069-Diamantes e Areia
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -30,15 +27,13 @@ int main()
  
     scanf("%d", &N);
  
- while(N--)
- {
+ while(N--){
   scanf(" %s", linha);
   
   achou = 1;
   diamantes = 0;
   
-  while(achou)
-  {
+  while(achou){
    a = 0;
    achou = 0;
    
@@ -70,8 +65,7 @@ int main()
  return 0;
 }
 
-
-1430-Composição de Jingles
+//
 
 #include <stdio.h>
 #include <string.h>
